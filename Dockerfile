@@ -13,7 +13,7 @@ RUN wget --quiet -O ${PAYARA_PATH}/payara-micro.jar https://github.com/Pandrex24
 RUN wget --quiet -O ${PAYARA_PATH}/rest-jcache.war https://github.com/Pandrex247/payara-kubernetes-testing/blob/master/rest-jcache.war?raw=true
 
 # Default payara ports to expose
-EXPOSE 4848 8009 8080 8181
+EXPOSE 4848 9009 8080 8181
 
 USER payara
 WORKDIR $PAYARA_PATH
