@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: payara-micro
+  labels:
+    name: payara-micro
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        name: payara-micro
+    spec:
+      containers:
+      - name: payara-micro
+        image: pandrex247/payara-kubernetes-testing
+        imagePullPolicy: Always
+        ports:
+        - name: payara-micro
+          containerPort: 8080
