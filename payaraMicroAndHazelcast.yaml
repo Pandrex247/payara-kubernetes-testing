@@ -7,8 +7,6 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - name: hazelcast
-    port: 6900
   - name: micro
     port: 8080
   selector: 

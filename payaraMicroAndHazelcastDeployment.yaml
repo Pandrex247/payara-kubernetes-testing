@@ -18,5 +18,3 @@ spec:
         ports:
         - name: payara-micro
           containerPort: 8080
-        - name: hazelcast
-          containerPort: 6900
