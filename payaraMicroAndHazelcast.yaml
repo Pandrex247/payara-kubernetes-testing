@@ -11,7 +11,5 @@ spec:
     port: 6900
   - name: micro
     port: 8080
-  - name: debug
-    port: 9009
   selector: 
     name: payara-micro

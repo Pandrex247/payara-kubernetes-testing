@@ -20,5 +20,3 @@ spec:
           containerPort: 8080
         - name: hazelcast
           containerPort: 6900
-        - name: debug
-          containerPort: 9009
