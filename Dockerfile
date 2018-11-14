@@ -18,4 +18,4 @@ EXPOSE 4848 9009 8080 8181
 USER payara
 WORKDIR $PAYARA_PATH
 
-ENTRYPOINT ["java", "-jar", "payara-micro.jar", "--deploy", "rest-jcache.war", "--autobindhttp", "--clustermode", "kubernetes:default,payara-micro", "--name", "payara-micro"]
+ENTRYPOINT ["java", "-Xdebug", "-Xrunjdwp:transport=dt_socket,address=9009,server=y,suspend=y", "-jar", "payara-micro.jar", "--deploy", "rest-jcache.war", "--autobindhttp", "--clustermode", "kubernetes:default,payara-micro", "--name", "payara-micro"]
