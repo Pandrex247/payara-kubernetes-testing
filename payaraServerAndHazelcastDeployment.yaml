@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: payara-micro
+  name: server
   labels:
-    name: payara-micro
+    name: server
 spec:
   selector:
     matchLabels:
-      name: payara-micro
+      name: server
   replicas: 2
   template:
     metadata:
       labels:
-        name: payara-micro
+        name: server
     spec:
       containers:
-      - name: payara-micro
-        image: pandrex247/payara-kubernetes-testing
+      - name: server
+        image: pandrex247/payara-kubernetes-testing:server
         imagePullPolicy: Always
         ports:
-        - name: payara-micro
+        - name: server
           containerPort: 8080
